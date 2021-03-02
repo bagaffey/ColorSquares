@@ -6,7 +6,7 @@
     const clickScore = document.getElementById("clicks");
     let shuffledPieces = pieces;
     let clickCount = 0;
-    let audio = false;
+    let EnableSound = false;
 
     const SoundMgr = {
         blue: new Audio("./Blue.wav"),
@@ -49,15 +49,15 @@
 
     const toggleAudio = function () {
         let audioText = "";
-        switch (audio) {
+        switch (EnableSound) {
             case true: {
-                audio = false;
-                audioText = "on";
+                EnableSound = false;
+                audioText = "off";
                 break;
             }
             default: {
-                audio = true;
-                audioText = "off";
+                EnableSound = true;
+                audioText = "on";
                 break;
             }
         }
@@ -112,7 +112,9 @@
         ++clickCount;
         clickScore.textContent = clickCount;
 
-        SoundMgr[SquareColor].play();
+        if (EnableSound) {
+            SoundMgr[SquareColor].play();
+        }
     };
 
     const handleKeyDown = function (event) {
