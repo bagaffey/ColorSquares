@@ -70,32 +70,6 @@
         }
     };
 
-    const currentState = function (requested) {
-        let row1 = "Row1: ";
-        let row2 = "Row2: ";
-
-        shuffledPieces.forEach((piece, index) => {
-            switch (true) {
-                case (index <= 2): {
-                    row1 += `${piece.getAttribute("aria-label")} `;
-                    break;
-                }
-                case (index > 2 && index <= 5): {
-                    row2 += `${piece.getAttribute("aria-label")} `;
-                    break;
-                }
-                default: {
-                    break;
-                }
-            }
-        });
-
-        if (requested) {
-            say(row1);
-            say(row2);
-        }
-    };
-
     const ActivateColorSquare = function () {
         const clickedPiece = this || null;
         clickedPiece.focus();
