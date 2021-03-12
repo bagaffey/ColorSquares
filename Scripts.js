@@ -5,7 +5,7 @@
     const soundButton = document.getElementById("toggle-audio");
     const clickScore = document.getElementById("clicks");
     let shuffledPieces = pieces;
-    let clickCount = 0;
+    let ClickCount = 0;
     let EnableSound = false;
 
     const SoundMgr = {
@@ -37,7 +37,7 @@
     };
 
     const reset = function () {
-        clickCount = 0;
+        ClickCount = 0;
         shuffledPieces = shuffle([...pieces]);
         updatePositions();
     };
@@ -83,8 +83,8 @@
             }
         }
 
-        ++clickCount;
-        clickScore.textContent = clickCount;
+        ++ClickCount;
+        clickScore.textContent = ClickCount;
 
         if (EnableSound) {
             SoundMgr[SquareColor].play();
