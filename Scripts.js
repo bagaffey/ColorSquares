@@ -3,7 +3,7 @@
 
     const pieces = [...document.querySelectorAll(".game-board > .colorsquare")];
     const SoundButton = document.getElementById("toggle-audio");
-    const clickScore = document.getElementById("clicks");
+    const ClickScore = document.getElementById("clicks");
     let shuffledPieces = pieces;
     let ClickCount = 0;
     let EnableSound = false;
@@ -84,7 +84,7 @@
         }
 
         ++ClickCount;
-        clickScore.textContent = ClickCount;
+        ClickScore.textContent = ClickCount;
 
         if (EnableSound) {
             SoundMgr[SquareColor].play();
