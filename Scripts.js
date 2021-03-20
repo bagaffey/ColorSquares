@@ -2,7 +2,7 @@
     "use strict";
 
     const pieces = [...document.querySelectorAll(".game-board > .colorsquare")];
-    const soundButton = document.getElementById("toggle-audio");
+    const SoundButton = document.getElementById("toggle-audio");
     const clickScore = document.getElementById("clicks");
     let shuffledPieces = pieces;
     let ClickCount = 0;
@@ -43,7 +43,7 @@
     };
 
     const updateToggleButtonText = function (audioText) {
-        const e = soundButton.parentElement.querySelector("span");
+        const e = SoundButton.parentElement.querySelector("span");
         e.innerText = audioText;
     };
 
@@ -124,9 +124,9 @@
 
     addEventListener("keydown", handleKeyDown);
     addEventListener("play", playAudio, true);
-    soundButton.addEventListener("click", toggleAudio);
+    SoundButton.addEventListener("click", toggleAudio);
 
-    soundButton.click();
+    SoundButton.click();
 
     for (const piece of pieces) {
         piece.addEventListener("click", ActivateColorSquare);
