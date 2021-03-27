@@ -4,7 +4,7 @@
     const pieces = [...document.querySelectorAll(".game-board > .colorsquare")];
     const SoundButton = document.getElementById("toggle-audio");
     const ClickScore = document.getElementById("clicks");
-    let shuffledPieces = pieces;
+    let ShuffledPieces = pieces;
     let ClickCount = 0;
     let EnableSound = false;
 
@@ -31,14 +31,14 @@
     };
 
     const updatePositions = function () {
-        shuffledPieces.forEach((piece) => {
+        ShuffledPieces.forEach((piece) => {
             piece.parentNode.appendChild(piece);
         });
     };
 
     const reset = function () {
         ClickCount = 0;
-        shuffledPieces = shuffle([...pieces]);
+        ShuffledPieces = shuffle([...pieces]);
         updatePositions();
     };
 
