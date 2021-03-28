@@ -16,14 +16,14 @@
     };
 
     const shuffle = function (array) {
-        let currentIndex = array.length, temp, randomIndex;
+        let CurrentIndex = array.length, temp, randomIndex;
 
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
+        while (CurrentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * CurrentIndex);
+            CurrentIndex -= 1;
 
-            temp = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
+            temp = array[CurrentIndex];
+            array[CurrentIndex] = array[randomIndex];
             array[randomIndex] = temp;
         }
 
