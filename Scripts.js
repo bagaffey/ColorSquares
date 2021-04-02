@@ -1,10 +1,10 @@
 (function () {
     "use strict";
 
-    const pieces = [...document.querySelectorAll(".game-board > .colorsquare")];
+    const Pieces = [...document.querySelectorAll(".game-board > .colorsquare")];
     const SoundButton = document.getElementById("toggle-audio");
     const ClickScore = document.getElementById("clicks");
-    let ShuffledPieces = pieces;
+    let ShuffledPieces = Pieces;
     let ClickCount = 0;
     let EnableSound = false;
 
@@ -38,7 +38,7 @@
 
     const reset = function () {
         ClickCount = 0;
-        ShuffledPieces = shuffle([...pieces]);
+        ShuffledPieces = shuffle([...Pieces]);
         updatePositions();
     };
 
@@ -101,7 +101,7 @@
             }
             case "1": case "2": case "3": case "4": {
                 const clickedPiece = document.getElementById(`block-${parseInt(event.key)}`);
-                indexOfClickedPiece = pieces.indexOf(clickedPiece);
+                indexOfClickedPiece = Pieces.indexOf(clickedPiece);
                 break;
             }
             default: {
@@ -109,7 +109,7 @@
             }
         }
 
-        const clickedPiece = pieces[indexOfClickedPiece];
+        const clickedPiece = Pieces[indexOfClickedPiece];
         if (clickedPiece) {
             ActivateColorSquare.call(clickedPiece, event);
         }
@@ -128,7 +128,7 @@
 
     SoundButton.click();
 
-    for (const piece of pieces) {
+    for (const piece of Pieces) {
         piece.addEventListener("click", ActivateColorSquare);
         piece.addEventListener("keypress", ActivateColorSquare);
     }
