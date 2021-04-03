@@ -31,8 +31,8 @@
     };
 
     const updatePositions = function () {
-        ShuffledPieces.forEach((piece) => {
-            piece.parentNode.appendChild(piece);
+        ShuffledPieces.forEach((P) => {
+            P.parentNode.appendChild(P);
         });
     };
 
