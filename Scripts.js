@@ -48,20 +48,20 @@
     };
 
     const toggleAudio = function () {
-        let audioText = "";
+        let AudioText = "";
         switch (EnableSound) {
             case true: {
                 EnableSound = false;
-                audioText = "off";
+                AudioText = "off";
                 break;
             }
             default: {
                 EnableSound = true;
-                audioText = "on";
+                AudioText = "on";
                 break;
             }
         }
-        updateToggleButtonText(audioText);
+        updateToggleButtonText(AudioText);
     };
 
     const say = function (statement) {
