@@ -71,11 +71,11 @@
     };
 
     const ActivateColorSquare = function () {
-        const clickedPiece = this || null;
-        clickedPiece.focus();
+        const ClickedPiece = this || null;
+        ClickedPiece.focus();
         var SquareColor = null;
 
-        var ClassList = clickedPiece.classList;
+        var ClassList = ClickedPiece.classList;
 
         for (let i = 0; i < ClassList.length; ++i) {
             if (SoundMgr.hasOwnProperty(ClassList[i])) {
