@@ -128,9 +128,9 @@
 
     SoundButton.click();
 
-    for (const piece of Pieces) {
-        piece.addEventListener("click", ActivateColorSquare);
-        piece.addEventListener("keypress", ActivateColorSquare);
+    for (const P of Pieces) {
+        P.addEventListener("click", ActivateColorSquare);
+        P.addEventListener("keypress", ActivateColorSquare);
     }
 
     reset();
