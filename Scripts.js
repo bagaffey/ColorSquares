@@ -115,11 +115,11 @@
         }
     };
 
-    const playAudio = function (audioVar) {
+    const playAudio = function (AudioVar) {
         if (window.currentlyPlaying) {
             window.currentlyPlaying.pause();
         }
-        window.currentlyPlaying = audioVar.target;
+        window.currentlyPlaying = AudioVar.target;
     };
 
     addEventListener("keydown", handleKeyDown);
