@@ -92,7 +92,7 @@
     };
 
     const handleKeyDown = function (event) {
-        let indexOfClickedPiece;
+        let IndexOfClickedPiece;
 
         switch (event.key) {
             case "c": {
@@ -101,7 +101,7 @@
             }
             case "1": case "2": case "3": case "4": {
                 const clickedPiece = document.getElementById(`block-${parseInt(event.key)}`);
-                indexOfClickedPiece = Pieces.indexOf(clickedPiece);
+                IndexOfClickedPiece = Pieces.indexOf(clickedPiece);
                 break;
             }
             default: {
@@ -109,7 +109,7 @@
             }
         }
 
-        const clickedPiece = Pieces[indexOfClickedPiece];
+        const clickedPiece = Pieces[IndexOfClickedPiece];
         if (clickedPiece) {
             ActivateColorSquare.call(clickedPiece, event);
         }
