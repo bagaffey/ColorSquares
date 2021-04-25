@@ -109,9 +109,9 @@
             }
         }
 
-        const clickedPiece = Pieces[IndexOfClickedPiece];
-        if (clickedPiece) {
-            ActivateColorSquare.call(clickedPiece, event);
+        const ClickedPiece = Pieces[IndexOfClickedPiece];
+        if (ClickedPiece) {
+            ActivateColorSquare.call(ClickedPiece, event);
         }
     };
 
