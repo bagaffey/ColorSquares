@@ -15,19 +15,19 @@
         red: new Audio("./Red.wav")
     };
 
-    const shuffle = function (array) {
-        let CurrentIndex = array.length, temp, randomIndex;
+    const shuffle = function (SquaresArray) {
+        let CurrentIndex = SquaresArray.length, temp, randomIndex;
 
         while (CurrentIndex !== 0) {
             randomIndex = Math.floor(Math.random() * CurrentIndex);
             CurrentIndex -= 1;
 
-            temp = array[CurrentIndex];
-            array[CurrentIndex] = array[randomIndex];
-            array[randomIndex] = temp;
+            temp = SquaresArray[CurrentIndex];
+            SquaresArray[CurrentIndex] = SquaresArray[randomIndex];
+            SquaresArray[randomIndex] = temp;
         }
 
-        return (array);
+        return (SquaresArray);
     };
 
     const updatePositions = function () {
