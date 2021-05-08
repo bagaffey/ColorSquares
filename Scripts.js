@@ -16,15 +16,15 @@
     };
 
     const shuffle = function (SquaresArray) {
-        let CurrentIndex = SquaresArray.length, temp, randomIndex;
+        let CurrentIndex = SquaresArray.length, temp, RandomIndex;
 
         while (CurrentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * CurrentIndex);
+            RandomIndex = Math.floor(Math.random() * CurrentIndex);
             CurrentIndex -= 1;
 
             temp = SquaresArray[CurrentIndex];
-            SquaresArray[CurrentIndex] = SquaresArray[randomIndex];
-            SquaresArray[randomIndex] = temp;
+            SquaresArray[CurrentIndex] = SquaresArray[RandomIndex];
+            SquaresArray[RandomIndex] = temp;
         }
 
         return (SquaresArray);
