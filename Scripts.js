@@ -42,9 +42,9 @@
         updatePositions();
     };
 
-    const updateToggleButtonText = function (audioText) {
+    const updateToggleButtonText = function (AudioText) {
         const e = SoundButton.parentElement.querySelector("span");
-        e.innerText = audioText;
+        e.innerText = AudioText;
     };
 
     const toggleAudio = function () {
