@@ -73,6 +73,7 @@
     const ActivateColorSquare = function () {
         const ClickedPiece = this || null;
         ClickedPiece.focus();
+
         var SquareColor = null;
 
         var ClassList = ClickedPiece.classList;
