@@ -9,9 +9,9 @@
     let EnableSound = false;
 
     const SoundMgr = {
+        white: new Audio("./White.wav"),
         blue: new Audio("./Blue.wav"),
         pink: new Audio("./Pink.wav"),
-        white: new Audio("./White.wav"),
         red: new Audio("./Red.wav")
     };
 
